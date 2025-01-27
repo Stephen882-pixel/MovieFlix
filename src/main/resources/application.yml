@@ -1,12 +1,14 @@
 spring:
   datasource:
-    username: root
-    password:
-    url: jdbc:mysql://localhost:3306/movies
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/Movies
   jpa:
     hibernate:
-      ddl-auto: update
-    show-sql: true
+      ddl-auto: update  # Automatically update the schema
+    show-sql: true  # Show SQL queries in the logs
     properties:
       hibernate:
-        format_sql: true
+        format_sql: true  # Format SQL queries for better readability
+server:
+  port: 8081  # Use any available port (e.g., 8081, 9090, etc.)
